@@ -2,3 +2,23 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+Start
+
+
+Set random_number to a random number between 1 and 10
+
+Set guesses to 3
+	Prompt user to input a guess
+		If guess is correct
+			Print “Congrats you guess correct”
+		Else
+			if guess is to high
+				Print “Too high guess again”
+		Else
+			If guess is to low
+				Print “Too low guess again”
+End Loop
+
+Print “Game over. The number was {random_number}”
+
+End

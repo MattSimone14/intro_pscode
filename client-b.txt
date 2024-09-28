@@ -2,3 +2,31 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+DEFINE CustomerPosition as (0, 0) // Start position
+DEFINE TargetLocation as (targetX, targetY)
+
+FUNCTION Move(direction)
+    IF direction == "north" THEN CustomerPosition.y -= 1
+    ELSE IF direction == "south" THEN CustomerPosition.y += 1
+    ELSE IF direction == "east" THEN CustomerPosition.x += 1
+    ELSE IF direction == "west" THEN CustomerPosition.x -= 1
+END FUNCTION
+
+FUNCTION StartNavigation()
+    PRINT "Enter target location (x, y):"
+    INPUT targetX, targetY
+
+    WHILE TRUE DO
+        PRINT "Current Position: (", CustomerPosition.x, ", ", CustomerPosition.y, ")"
+        IF CustomerPosition.x == targetX AND CustomerPosition.y == targetY THEN
+            PRINT "You've reached your destination!"
+            BREAK
+        END IF
+        
+        PRINT "Choose direction: north, south, east, west"
+        INPUT userDirection
+        Move(userDirection)
+    END WHILE
+END FUNCTION
+
+StartNavigation()
