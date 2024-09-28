@@ -2,3 +2,16 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+START
+
+ 
+
+SET max_products to 50
+SET package_size to 2
+
+For count From package_size To max_products STEP package_size
+	PRINT count
+End loop
+
+
+END  
